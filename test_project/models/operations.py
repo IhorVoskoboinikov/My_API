@@ -33,3 +33,8 @@ class UpdateUser(OperationBase):
 
 class DeleteUser(OperationBase):
     pass
+
+
+class InGame(BaseModel):
+    status: OperationStatus
+

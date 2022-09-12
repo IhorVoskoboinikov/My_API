@@ -2,7 +2,7 @@
 from typing import List, Optional
 from fastapi import APIRouter, Depends, Response, status
 
-from ..models.operations import User, OperationStatus, CreateUser, UpdateUser
+from ..models.operations import User, OperationStatus, CreateUser, InGame #, UpdateUser,
 from ..services.operations import OperationService
 
 router = APIRouter(
@@ -36,15 +36,6 @@ def get_user(
     return service.get_user(user_id)
 
 
-@router.put('/{user_id}', response_model=User)
-def update_user(
-        user_id: int,
-        user_data: UpdateUser,
-        service: OperationService = Depends()
-):
-    return service.update(user_id, user_data)
-
-
 @router.delete('/{user_id}')
 def delete_user(
         user_id: int,
@@ -52,3 +43,21 @@ def delete_user(
 ):
     service.delete(user_id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+# @router.put('/{user_id}', response_model=User)
+# def update_user(
+#         user_id: int,
+#         user_data: UpdateUser,
+#         service: OperationService = Depends()
+# ):
+#     return service.update(user_id, user_data)
+
+
+@router.put('/{user_id}', response_model=User)
+def enter_and_out_the_game(
+        status: OperationStatus,
+        user_id: int,
+        service: OperationService = Depends()
+):
+    return service.enter_and_out_the_game(user_id, status)

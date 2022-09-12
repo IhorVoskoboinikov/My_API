@@ -5,7 +5,6 @@ Base = declarative_base()
 
 
 class Operation(Base):
-
     __tablename__ = 'users'
     id = sa.Column(sa.Integer, primary_key=True)
     name = sa.Column(sa.String)
@@ -13,3 +12,6 @@ class Operation(Base):
     email = sa.Column(sa.String)
     status = sa.Column(sa.String)
     description = sa.Column(sa.String, nullable=True)
+
+
+

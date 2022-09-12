@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from test_project.database import get_session
 from .. import tables
-from ..models.operations import OperationStatus, CreateUser, UpdateUser
+from ..models.operations import OperationStatus, CreateUser, InGame, UpdateUser
 
 
 class OperationService:
@@ -50,3 +50,9 @@ class OperationService:
         operation = self._get(user_id)
         self.session.delete(operation)
         self.session.commit()
+
+    def enter_and_out_the_game(self, user_id: int, status: OperationStatus) -> tables.Operation:
+        operation = self._get(user_id)
+        setattr(operation, 'status', status)
+        self.session.commit()
+        return operation

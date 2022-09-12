@@ -2,7 +2,6 @@
 from typing import List, Optional
 from fastapi import APIRouter, Depends, Response, status
 
-
 from ..models.operations import User, OperationStatus, CreateUser, UpdateUser
 from ..services.operations import OperationService
 

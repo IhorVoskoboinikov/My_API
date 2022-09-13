@@ -27,14 +27,7 @@ class CreateUser(OperationBase):
     pass
 
 
-class UpdateUser(OperationBase):
-    pass
-
-
 class DeleteUser(OperationBase):
     pass
 
-
-class InGame(BaseModel):
-    status: OperationStatus
 

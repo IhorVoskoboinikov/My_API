@@ -1,8 +1,7 @@
-# создание Endpoints для разных операций
 from typing import List, Optional
 from fastapi import APIRouter, Depends, Response, status
 
-from ..models.operations import User, OperationStatus, CreateUser, InGame #, UpdateUser,
+from ..models.operations import User, OperationStatus, CreateUser
 from ..services.operations import OperationService
 
 router = APIRouter(
@@ -12,7 +11,7 @@ router = APIRouter(
 
 @router.get('/', response_model=List[User])
 def get_all_users(
-        status: Optional[OperationStatus] = None,  # чтобы данный параметр был НЕ обязательным -> None
+        status: Optional[OperationStatus] = None,
         service: OperationService = Depends()
 
 ):
@@ -43,15 +42,6 @@ def delete_user(
 ):
     service.delete(user_id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
-
-
-# @router.put('/{user_id}', response_model=User)
-# def update_user(
-#         user_id: int,
-#         user_data: UpdateUser,
-#         service: OperationService = Depends()
-# ):
-#     return service.update(user_id, user_data)
 
 
 @router.put('/{user_id}', response_model=User)

@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from test_project.database import get_session
 from .. import tables
-from ..models.operations import OperationStatus, CreateUser, InGame, UpdateUser
+from ..models.operations import OperationStatus, CreateUser
 
 
 class OperationService:
@@ -36,13 +36,6 @@ class OperationService:
     def create(self, user_data: CreateUser) -> tables.Operation:
         operation = tables.Operation(**user_data.dict())
         self.session.add(operation)
-        self.session.commit()
-        return operation
-
-    def update(self, user_id: int, user_data: UpdateUser) -> tables.Operation:
-        operation = self._get(user_id)
-        for field, value in user_data:
-            setattr(operation, field, value)
         self.session.commit()
         return operation
 

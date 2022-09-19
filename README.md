@@ -2,18 +2,18 @@
 ___
 ## My api - this is an application that allows the user to interact with the site (in our case, play). Our project has the following features:
 
-> 1. Player registration
-> 2. Getting a list of players (everyone who registered, who plays, who does not play)
-> 3. Changing the player's status (login or logout)
-> 4. Getting information about a user by id
-> 5. Deleting a user
++  Player registration
++ Getting a list of players (everyone who registered, who plays, who does not play)
++ Changing the player's status (login or logout)
++ Getting information about a user by id
++ Deleting a user
 ___
 
-## Installation:
+## Setup:
 
-> 1. clone the repository ```git clone https://github.com/IhorVoskoboinikov/My_API```
-> 2. install dependencies ```pip install -r requirements.txt```
-> 3. run the module with the command ```uvicorn test_project.app:app```
++ ```git clone https://github.com/IhorVoskoboinikov/My_API```
++ ```pip install -r requirements.txt```
++ ```uvicorn test_project.app:app```
 ___
 
 ## Usage:

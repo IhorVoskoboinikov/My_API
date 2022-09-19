@@ -11,9 +11,9 @@ ___
 
 ## Installation:
 
-> 1. clone the repository  ```git clone https://github.com/IhorVoskoboinikov/My_API```
+> 1. clone the repository ```git clone https://github.com/IhorVoskoboinikov/My_API```
 > 2. install dependencies ```pip install -r requirements.txt```
-> 3. run the module with the command ```uvicorn test_project.app:```
+> 3. run the module with the command ```uvicorn test_project.app:app```
 ___
 
 ## Usage:
@@ -25,22 +25,22 @@ ___
 ## The REST API to the example app is described below:
 ### _Get All Users:_
 > + GET/operation/Get All Users
->   + status == '--'  list all users who have registered from database
->   + status == 'in game'  list all users who in game now from database
->   + status == 'out game'  list all users who out game now from database
+>   +[x] status == '--'  list all users who have registered from database
+>   +[x] status == 'in game'  list all users who in game now from database
+>   +[x] status == 'out game'  list all users who out game now from database
 
 ### _Created User:_
 > + POST/operation/Created User
->   + Add user with {user_id} to database
+>   +[x] Add user with {user_id} to database
 
 ### _Get User:_
 > + GET/operation/{user_id} Get User
->   + get user by {user_id} from database
+>   +[x] get user by {user_id} from database
 
 ### _Get User:_
 > +  PUT/operation/{user_id} Enter And Out Game
->   + change the status of the user by {user_id} "in the game" or "out of the game" and write to the database
+>   +[x] change the status of the user by {user_id} "in the game" or "out of the game" and write to the database
 
 ### _Delete User:_
 > + DELETE/operation/Delete User
->   + Remove user with {user_id} from database
+>   +[x] Remove user with {user_id} from database

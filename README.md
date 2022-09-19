@@ -17,32 +17,3 @@ ___
 > 5. run the module with the command `uvicorn test_project.app:app`
 
 
-**bold**
-*italic*
-***text***
-_text_
-__text__
-~~test~~
-> qwe
->>qwe
->>>qwe
-
-Текстовая строка в которой `x*2/5` расположен
-```python
-class OperationService:
-    def __init__(self, session: Session = Depends(get_session)):
-        self.session = session
-```
-+ qwerqwer
-  - qweqwe
-    * qweqwe
-1. qweqw
-2. qweqwe 
-    1. qwe 
-    2. qwe
-+[x] qweqwe
-+[ ] qweqwe
-
-[my_git_hub](https://github.com/IhorVoskoboinikov/My_API)
-
-![fon](https://cdn.pixabay.com/photo/2021/07/06/19/26/drops-6392473_960_720.jpg)

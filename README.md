@@ -25,9 +25,9 @@ ___
 ## The REST API to the example app is described below:
 ### _Get All Users:_
 > + GET/operation/Get All Users
->   + status == '--'  list all users who have registered from database
->   + status == 'in game'  list all users who in game now from database
->   + status == 'out game'  list all users who out game now from database
+>   + Status == '--'  list all users who have registered from database
+>   + Status == 'in game'  list all users who in game now from database
+>   + Status == 'out game'  list all users who out game now from database
 
 ### _Created User:_
 > + POST/operation/Created User
@@ -35,11 +35,11 @@ ___
 
 ### _Get User:_
 > + GET/operation/{user_id} Get User
->   + get user by {user_id} from database
+>   + Get user by {user_id} from database
 
 ### _Get User:_
 > +  PUT/operation/{user_id} Enter And Out Game
->   + change the status of the user by {user_id} "in the game" or "out of the game" and write to the database
+>   + Change the status of the user by {user_id} "in the game" or "out of the game" and write to the database
 
 ### _Delete User:_
 > + DELETE/operation/Delete User
